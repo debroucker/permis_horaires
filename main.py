@@ -1,12 +1,16 @@
+from google_drive_downloader import GoogleDriveDownloader as gdd
 from datetime import datetime
 import cal
 import pdf
 
-path = 'CarteRDV_DEBROUCKER_Tommy.pdf'
+path = 'pdf.pdf'
+gdrive_id = '1sBgUPHZIJ3zJ0l4FBDp-5v97egKMdUQg'
 
 def main() :
     #delete all event with 'Place O Permis'
     cal.delete_all_event_permis()
+    #dl pdf in gdrive
+    gdd.download_file_from_google_drive(file_id=gdrive_id, dest_path='./pdf.pdf')
     #add event
     res = pdf.extract_good_text(pdf.read_pdf(path))
     for e in res : 
