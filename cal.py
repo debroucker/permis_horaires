@@ -3,7 +3,8 @@ from gcsa.event import Event
 from gcsa.google_calendar import GoogleCalendar
 
 GMAIL = 'debroucker.tommy1@gmail.com'
-CAL = GoogleCalendar(GMAIL)
+PATH_JSON = 'cred_tommy.json'
+CAL = GoogleCalendar(GMAIL, credentials_path=PATH_JSON)
 
 def add_event(name, begin):
     event = Event(

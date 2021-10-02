@@ -1,10 +1,10 @@
-from google_drive_downloader import GoogleDriveDownloader as gdd
+# from google_drive_downloader import GoogleDriveDownloader as gdd
 from datetime import datetime
 import cal
 import pdf
 
-path = 'CarteRDV_DEBROUCKER_Tommy.PDF'
-gdrive_id = '1sBgUPHZIJ3zJ0l4FBDp-5v97egKMdUQg'
+path = 'CarteRDV_DEBROUCKER_TOMMY.PDF'
+# gdrive_id = '1sBgUPHZIJ3zJ0l4FBDp-5v97egKMdUQg'
 
 def main() :
     #delete all event with 'Place O Permis'
