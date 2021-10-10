@@ -2,11 +2,15 @@
 from datetime import datetime
 import cal
 import pdf
+import sys
 
 path = 'CarteRDV_DEBROUCKER_TOMMY.PDF'
 # gdrive_id = '1sBgUPHZIJ3zJ0l4FBDp-5v97egKMdUQg'
 
 def main() :
+    #get argv path pdf
+    if len(sys.argv) >= 2 :
+        path = sys.argv[1]
     #delete all event with 'Place O Permis'
     cal.delete_all_event_permis()
     #dl pdf in gdrive
